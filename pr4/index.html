@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практична робота №4 - Інтерактивні елементи</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Інтерактивні елементи веб-сторінки</h1>
+        <p class="author">Виконала: Манченко Анна</p>
+        
+        <!-- Випадаюче меню -->
+        <nav class="dropdown-menu">
+            <button class="menu-btn">Головне меню</button>
+            <div class="menu-content">
+                <a href="#home">Головна</a>
+                <a href="#gallery">Галерея</a>
+                <a href="#contact">Контакти</a>
+                <a href="#about">Про нас</a>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home">
+            <h2>Вітаємо на сторінці!</h2>
+            <p>Ця сторінка демонструє різні інтерактивні елементи, створені за допомогою HTML, CSS та JavaScript.</p>
+            <button id="openModal" class="btn">Відкрити модальне вікно</button>
+        </section>
+        
+        <!-- Інтерактивна галерея -->
+        <section id="gallery" class="gallery-section">
+            <h2>Галерея зображень</h2>
+            
+            <div class="gallery">
+                <div class="gallery-container">
+                    <img src="https://picsum.photos/id/10/600/400" alt="Зображення 1" class="gallery-item">
+                    <img src="https://picsum.photos/id/11/600/400" alt="Зображення 2" class="gallery-item">
+                    <img src="https://picsum.photos/id/12/600/400" alt="Зображення 3" class="gallery-item">
+                    <img src="https://picsum.photos/id/13/600/400" alt="Зображення 4" class="gallery-item">
+                </div>
+                
+                <div class="gallery-nav">
+                    <button class="gallery-prev">Попереднє</button>
+                    <button class="gallery-next">Наступне</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Форма зворотного звязку -->
+        <section id="contact" class="contact-section">
+            <h2>Зворотній зв'язок</h2>
+            
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Ім'я:</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="error-message" id="nameError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Повідомлення:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <span class="error-message" id="messageError"></span>
+                </div>
+                
+                <button type="submit" class="btn submit-btn">Надіслати</button>
+            </form>
+            
+            <div id="formSuccess" class="success-message">
+                Ваше повідомлення успішно відправлено!
+            </div>
+        </section>
+    </main>
+    
+    <!-- Модальне вікно -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Модальне вікно</h2>
+            <p>Це приклад модального вікна. Воно відкривається при натисканні на кнопку та закривається при натисканні на хрестик або поза вікном.</p>
+        </div>
+    </div>
+    
+    <!-- Кнопка "вгору" -->
+    <button id="scrollTopBtn" class="scroll-top-btn">↑</button>
+    
+    <footer>
+        <p>Практична робота №4 з інтерактивними елементами</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
