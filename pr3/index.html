@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Практична робота №3</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        
+        h2 {
+            color: green;
+            margin-top: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .styled-list {
+            list-style-type: square;
+            padding-left: 25px;
+        }
+        
+        .description {
+            color: #444;
+        }
+        
+        .author-info {
+            margin-bottom: 20px;
+            font-style: italic;
+            color: #666;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #777;
+        }
+    </style>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 style="color: blue; font-size: 24px;">Практична робота №3: Стилізація CSS</h1>
+            <div class="author-info">
+                <p>Виконала: Манченко Анна</p>
+            </div>
+        </header>
+        
+        <div class="intro-section">
+            <h2>Вступ до CSS</h2>
+            <p class="description">CSS — це мова стилів для оформлення HTML-документів. CSS дозволяє змінювати кольори, шрифти, відступи та інші візуальні характеристики елементів на веб-сторінці.</p>
+            
+            <div class="example-box">
+                <h3>Способи додавання CSS:</h3>
+                <ul class="styled-list">
+                    <li>Вбудований (атрибут style)</li>
+                    <li>Внутрішній (тег style в head)</li>
+                    <li>Зовнішній (окремий файл .css)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2>Демонстрація CSS властивостей</h2>
+            
+            <h3>Робота з текстом</h3>
+            <p style="font-weight: bold; color: orange;">Цей параграф використовує вбудований стиль.</p>
+            <p class="description">Цей параграф використовує стиль із внутрішнього CSS.</p>
+            <p class="highlighted-text">Цей параграф використовує стиль із зовнішнього CSS файлу.</p>
+            
+            <h3>Робота з зображеннями</h3>
+            <div class="image-container">
+                <img src="https://picsum.photos/300/200" alt="Зображення" class="responsive-image">
+                <p class="image-caption">Підпис до зображення</p>
+            </div>
+            
+            <h3>Навігаційне меню</h3>
+            <nav class="navigation">
+                <a href="#" class="nav-link">Головна</a>
+                <a href="#" class="nav-link">Про нас</a>
+                <a href="#" class="nav-link">Послуги</a>
+                <a href="#" class="nav-link">Контакти</a>
+            </nav>
+            
+            <h3>Блокові елементи</h3>
+            <div class="flex-container">
+                <div class="box box1">Блок 1</div>
+                <div class="box box2">Блок 2</div>
+                <div class="box box3">Блок 3</div>
+            </div>
+            
+            <h3>Списки</h3>
+            <h4>Невпорядкований список</h4>
+            <ul class="custom-list">
+                <li>Елемент списку 1</li>
+                <li>Елемент списку 2</li>
+                <li>Елемент списку 3</li>
+            </ul>
+            
+            <h4>Впорядкований список</h4>
+            <ol class="numbered-list">
+                <li>Перший пункт</li>
+                <li>Другий пункт</li>
+                <li>Третій пункт</li>
+            </ol>
+            
+            <h3>Таблиця зі стилями</h3>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Ім'я</th>
+                        <th>Прізвище</th>
+                        <th>Вік</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Іван</td>
+                        <td>Петров</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Марія</td>
+                        <td>Іванова</td>
+                        <td>22</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Петро</td>
+                        <td>Сидоров</td>
+                        <td>30</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html> 
