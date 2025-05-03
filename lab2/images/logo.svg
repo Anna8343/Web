@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="50" viewBox="0 0 150 50">
+  <rect width="150" height="50" fill="#2d5ba9" rx="5" ry="5"/>
+  <text x="20" y="33" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white">TechHub</text>
+  <circle cx="130" cy="25" r="10" fill="#fff"/>
+  <path d="M130 18 L130 32 M123 25 L137 25" stroke="#2d5ba9" stroke-width="2"/>
+</svg> 

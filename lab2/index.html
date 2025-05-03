@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №2 - Адаптивна навігація</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="author-info">
+            <p>Виконала: Манченко Анна</p>
+            <p>Дата: 03.05.2025</p>
+        </div>
+        
+        <nav class="nav-container">
+            <div class="nav-logo">
+                <a href="#"><img src="images/logo.svg" alt="TechHub Logo"></a>
+            </div>
+            
+            <div class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+                <span class="hamburger"></span>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu" role="menu">
+                <li class="nav-item active" role="none">
+                    <a href="#" role="menuitem" aria-current="page">Головна</a>
+                </li>
+                <li class="nav-item dropdown" role="none">
+                    <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false">Послуги <i class="fa-solid fa-angle-down"></i></a>
+                    <ul class="dropdown-menu" role="menu" aria-label="Послуги підменю">
+                        <li role="none"><a href="#" role="menuitem">Веб-розробка</a></li>
+                        <li role="none"><a href="#" role="menuitem">Дизайн</a></li>
+                        <li role="none"><a href="#" role="menuitem">Маркетинг</a></li>
+                        <li role="none"><a href="#" role="menuitem">Консультації</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="#" role="menuitem">Про нас</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="#" role="menuitem">Блог</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="#" role="menuitem">Контакти</a>
+                </li>
+                <li class="nav-search" role="none">
+                    <form action="#" method="get" role="search">
+                        <input type="search" placeholder="Пошук..." aria-label="Пошук по сайту">
+                        <button type="submit" aria-label="Шукати">
+                            <i class="fa-solid fa-search"></i>
+                        </button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h1>Адаптивна навігація для сучасних веб-сайтів</h1>
+            <p>Лабораторна робота №2 з розробки адаптивного меню, що працює на різних пристроях</p>
+        </section>
+        
+        <section class="content">
+            <h2>Про проект</h2>
+            <p>Ця сторінка демонструє створення адаптивної навігації з використанням HTML, CSS та JavaScript. Навігація адаптується під різні розміри екрану, забезпечуючи зручне користування як на десктопних, так і на мобільних пристроях.</p>
+            
+            <h3>Особливості реалізації:</h3>
+            <ul>
+                <li>Адаптивний дизайн для різних розмірів екрану</li>
+                <li>Бургер-меню для мобільних пристроїв</li>
+                <li>Випадаюче підменю для пункту "Послуги"</li>
+                <li>Пошук вбудований у навігацію</li>
+                <li>Анімації та ефекти взаємодії</li>
+                <li>Доступність з клавіатури</li>
+            </ul>
+            
+            <p>Спробуйте змінити розмір вікна браузера, щоб побачити як працює адаптивне меню на різних пристроях!</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 TechHub. Лабораторна робота №2. Всі права захищені.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html> 

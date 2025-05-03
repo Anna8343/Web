@@ -1,0 +1,307 @@
+/* Основні стилі */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.author-info {
+    text-align: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    font-style: italic;
+    font-size: 14px;
+    color: #666;
+}
+
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #e9f2ff;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+.hero h1 {
+    margin-bottom: 15px;
+    color: #2d5ba9;
+}
+
+.content {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+    color: #2d5ba9;
+    margin-bottom:.5em;
+}
+
+.content h3 {
+    margin: 1em 0 0.5em;
+}
+
+.content ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.content p {
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #333;
+    color: white;
+}
+
+/* Навігація */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 70px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-logo img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    position: relative;
+    margin: 0 5px;
+}
+
+.nav-item a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 4px;
+}
+
+.nav-item a:hover, .nav-item a:focus {
+    color: #2d5ba9;
+    background-color: #f5f5f5;
+}
+
+.nav-item.active a {
+    color: #2d5ba9;
+    font-weight: bold;
+}
+
+/* Випадаюче меню */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    width: 200px;
+    z-index: 10;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown a:focus + .dropdown-menu,
+.dropdown-menu:hover {
+    display: block;
+}
+
+.dropdown-menu li a {
+    padding: 10px 15px;
+    display: block;
+}
+
+.dropdown-menu li a:hover, .dropdown-menu li a:focus {
+    background-color: #f5f5f5;
+}
+
+/* Форма пошуку */
+.nav-search {
+    margin-left: 15px;
+}
+
+.nav-search form {
+    display: flex;
+    align-items: center;
+}
+
+.nav-search input[type="search"] {
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    width: 150px;
+    font-size: 14px;
+}
+
+.nav-search button {
+    padding: 8px 12px;
+    background-color: #2d5ba9;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nav-search button:hover, .nav-search button:focus {
+    background-color: #1d4999;
+}
+
+/* Бургер-меню для мобільних пристроїв */
+.nav-toggle {
+    display: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 20;
+}
+
+.hamburger {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.3s;
+}
+
+.hamburger::before, .hamburger::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    transition: transform 0.3s;
+}
+
+.hamburger::before {
+    top: -10px;
+}
+
+.hamburger::after {
+    top: 10px;
+}
+
+/* Активний стан бургер-меню */
+.nav-toggle.active .hamburger {
+    background-color: transparent;
+}
+
+.nav-toggle.active .hamburger::before {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.nav-toggle.active .hamburger::after {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Медіа-запити для мобільних */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100%;
+        background-color: white;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        padding-top: 70px;
+        transition: right 0.3s;
+        z-index: 15;
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-item {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .nav-item a {
+        padding: 15px 20px;
+        border-radius: 0;
+    }
+    
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        display: none;
+    }
+    
+    .dropdown.open .dropdown-menu {
+        display: block;
+    }
+    
+    .nav-search {
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    .nav-search form {
+        padding: 0 20px;
+    }
+    
+    .nav-search input[type="search"] {
+        width: 100%;
+    }
+} 
