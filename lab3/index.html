@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №3 - Flexbox</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="author-info">
+        <p>Виконала: Манченко Анна</p>
+        <p>Дата: 03.05.2025</p>
+    </div>
+    
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.svg" alt="FlexSite Logo">
+            </a>
+        </div>
+        
+        <nav class="navigation">
+            <ul class="nav-menu">
+                <li><a href="#" class="active">Головна</a></li>
+                <li><a href="#">Товари</a></li>
+                <li><a href="#">Про нас</a></li>
+                <li><a href="#">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="main-container">
+        <main class="main-content">
+            <h1>Наші товари</h1>
+            
+            <section class="promo-banner">
+                <div class="promo-content">
+                    <h2>Літній розпродаж</h2>
+                    <p>Знижки до 50% на вибрані товари. Поспішайте, пропозиція діє до кінця місяця!</p>
+                    <a href="#" class="btn-promo">Переглянути акції</a>
+                </div>
+                <div class="promo-image">
+                    <img src="images/product1.svg" alt="Промо">
+                </div>
+            </section>
+            
+            <section class="filters">
+                <div class="filter-group">
+                    <label for="sort">Сортувати:</label>
+                    <select id="sort" name="sort">
+                        <option value="popular">За популярністю</option>
+                        <option value="price-asc">За зростанням ціни</option>
+                        <option value="price-desc">За спаданням ціни</option>
+                        <option value="new">Новинки</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label>Ціна:</label>
+                    <div class="price-range">
+                        <input type="text" placeholder="від" class="price-input">
+                        <span>-</span>
+                        <input type="text" placeholder="до" class="price-input">
+                        <button type="button" class="btn-filter">ОК</button>
+                    </div>
+                </div>
+                
+                <div class="view-options">
+                    <button type="button" class="btn-view active" title="Сітка">
+                        <span class="icon-grid"></span>
+                    </button>
+                    <button type="button" class="btn-view" title="Список">
+                        <span class="icon-list"></span>
+                    </button>
+                </div>
+            </section>
+            
+            <section class="products">
+                <article class="product-card">
+                    <div class="product-badge">Хіт продажів</div>
+                    <div class="product-image">
+                        <img src="images/product1.svg" alt="Товар 1">
+                    </div>
+                    <h3>Смартфон X1</h3>
+                    <div class="product-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="reviews-count">(42)</span>
+                    </div>
+                    <p>Потужний процесор, 6.5" екран, 12 ГБ оперативної пам'яті та батарея 5000 мАг.</p>
+                    <div class="product-actions">
+                        <div class="product-price">12499 грн</div>
+                        <button class="btn-add-to-cart">У кошик</button>
+                    </div>
+                </article>
+                
+                <article class="product-card">
+                    <div class="product-badge new">Новинка</div>
+                    <div class="product-image">
+                        <img src="images/product1.svg" alt="Товар 2">
+                    </div>
+                    <h3>Ноутбук Pro</h3>
+                    <div class="product-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="reviews-count">(18)</span>
+                    </div>
+                    <p>Ультратонкий ноутбук з 15.6" екраном, процесором Intel Core i7, 16 ГБ RAM та SSD 512 ГБ.</p>
+                    <div class="product-actions">
+                        <div class="product-price">29999 грн</div>
+                        <button class="btn-add-to-cart">У кошик</button>
+                    </div>
+                </article>
+                
+                <article class="product-card">
+                    <div class="product-badge sale">-20%</div>
+                    <div class="product-image">
+                        <img src="images/product1.svg" alt="Товар 3">
+                    </div>
+                    <h3>Планшет Mini</h3>
+                    <div class="product-rating">
+                        <span class="stars">★★★☆☆</span>
+                        <span class="reviews-count">(7)</span>
+                    </div>
+                    <p>Компактний планшет з 8" екраном, 4 ГБ оперативної пам'яті та батареєю 6000 мАг.</p>
+                    <div class="product-actions">
+                        <div class="product-price">
+                            <span class="old-price">6999 грн</span>
+                            5599 грн
+                        </div>
+                        <button class="btn-add-to-cart">У кошик</button>
+                    </div>
+                </article>
+                
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="images/product1.svg" alt="Товар 4">
+                    </div>
+                    <h3>Смарт-годинник</h3>
+                    <div class="product-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="reviews-count">(35)</span>
+                    </div>
+                    <p>Водонепроникний смарт-годинник з функцією моніторингу здоров'я та тривалістю роботи до 14 днів.</p>
+                    <div class="product-actions">
+                        <div class="product-price">3499 грн</div>
+                        <button class="btn-add-to-cart">У кошик</button>
+                    </div>
+                </article>
+            </section>
+            
+            <section class="banners">
+                <div class="banner-item">
+                    <div class="banner-content">
+                        <h3>Безкоштовна доставка</h3>
+                        <p>Для замовлень від 1000 грн</p>
+                    </div>
+                    <div class="banner-icon">🚚</div>
+                </div>
+                <div class="banner-item">
+                    <div class="banner-content">
+                        <h3>30 днів на повернення</h3>
+                        <p>Гарантована можливість повернення</p>
+                    </div>
+                    <div class="banner-icon">↩️</div>
+                </div>
+                <div class="banner-item">
+                    <div class="banner-content">
+                        <h3>Цілодобова підтримка</h3>
+                        <p>Допомога 24/7</p>
+                    </div>
+                    <div class="banner-icon">📞</div>
+                </div>
+            </section>
+        </main>
+        
+        <aside class="sidebar">
+            <div class="sidebar-widget">
+                <h3>Категорії товарів</h3>
+                <ul>
+                    <li><a href="#">Смартфони</a></li>
+                    <li><a href="#">Ноутбуки</a></li>
+                    <li><a href="#">Планшети</a></li>
+                    <li><a href="#">Смарт-годинники</a></li>
+                    <li><a href="#">Аксесуари</a></li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-widget">
+                <h3>Фільтри</h3>
+                <div class="filter-box">
+                    <h4>Бренд</h4>
+                    <div class="filter-options">
+                        <label><input type="checkbox"> Apple</label>
+                        <label><input type="checkbox"> Samsung</label>
+                        <label><input type="checkbox"> Xiaomi</label>
+                    </div>
+                </div>
+                
+                <div class="filter-box">
+                    <h4>Колір</h4>
+                    <div class="color-options">
+                        <span class="color-option black" title="Чорний"></span>
+                        <span class="color-option white" title="Білий"></span>
+                        <span class="color-option blue" title="Синій"></span>
+                        <span class="color-option red" title="Червоний"></span>
+                        <span class="color-option green" title="Зелений"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sidebar-widget popular-products">
+                <h3>Популярні товари</h3>
+                <div class="popular-product-item">
+                    <img src="images/product1.svg" alt="Популярний товар 1">
+                    <div class="popular-product-info">
+                        <h4>Навушники FlexPods</h4>
+                        <div class="product-price">1299 грн</div>
+                    </div>
+                </div>
+                <div class="popular-product-item">
+                    <img src="images/product1.svg" alt="Популярний товар 2">
+                    <div class="popular-product-info">
+                        <h4>Зарядний пристрій</h4>
+                        <div class="product-price">599 грн</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h3>Про нас</h3>
+                <ul>
+                    <li><a href="#">Про компанію</a></li>
+                    <li><a href="#">Наша команда</a></li>
+                    <li><a href="#">Контакти</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Інформація</h3>
+                <ul>
+                    <li><a href="#">Доставка</a></li>
+                    <li><a href="#">Оплата</a></li>
+                    <li><a href="#">Повернення</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Контакти</h3>
+                <p>Телефон: (044) 123-4567</p>
+                <p>Email: info@flexsite.com</p>
+                <p>Адреса: м. Київ, вул. Хрещатик, 1</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 FlexSite. Лабораторна робота №3 - Flexbox.</p>
+        </div>
+    </footer>
+</body>
+</html> 
