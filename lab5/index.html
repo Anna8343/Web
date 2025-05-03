@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №5 - Слайдер зображень</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="author-info">
+        <p>Виконала: Манченко Анна</p>
+        <p>Дата: 03.05.2025</p>
+    </div>
+    
+    <header>
+        <h1>Слайдер зображень</h1>
+    </header>
+    
+    <main>
+        <div class="slider-container">
+            <div class="slides">
+                <div class="slide">
+                    <img src="images/slide1.svg" alt="Слайд 1">
+                </div>
+                <div class="slide">
+                    <img src="images/slide2.svg" alt="Слайд 2">
+                </div>
+                <div class="slide">
+                    <img src="images/slide3.svg" alt="Слайд 3">
+                </div>
+                <div class="slide">
+                    <img src="images/slide4.svg" alt="Слайд 4">
+                </div>
+                <div class="slide">
+                    <img src="images/slide5.svg" alt="Слайд 5">
+                </div>
+            </div>
+            
+            <button class="slider-button prev" aria-label="Попередній слайд">&#10094;</button>
+            <button class="slider-button next" aria-label="Наступний слайд">&#10095;</button>
+            
+            <div class="dots-container"></div>
+            
+            <div class="slider-controls">
+                <div class="slide-counter">
+                    <span class="current-slide">1</span> / <span class="total-slides">5</span>
+                </div>
+                <button class="autoplay-button" aria-label="Автовідтворення">
+                    <span class="play-icon">▶</span>
+                    <span class="pause-icon">❚❚</span>
+                </button>
+            </div>
+            
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Лабораторна робота №5 - Слайдер зображень</p>
+    </footer>
+    
+    <script src="js/slider.js"></script>
+</body>
+</html> 
