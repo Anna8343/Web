@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №4 - Динамічне меню</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="author-info">
+        <p>Виконала: Манченко Анна</p>
+        <p>Дата: 03.05.2025</p>
+    </div>
+    
+    <header>
+        <h1>Динамічне меню</h1>
+    </header>
+    
+    <nav class="main-menu">
+        <button class="burger-menu" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <ul id="menuContainer">
+            <!-- Пункти меню будуть додані динамічно -->
+        </ul>
+    </nav>
+    
+    <main>
+        <section>
+            <h2>Демонстрація динамічного меню</h2>
+            <p>Ця сторінка демонструє роботу динамічного меню з наступними функціями:</p>
+            <ul>
+                <li>Динамічне завантаження пунктів меню з JSON</li>
+                <li>Анімації відкриття/закриття підменю</li>
+                <li>Підсвічування активного пункту</li>
+                <li>Мобільна версія з "бургер" кнопкою</li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Лабораторна робота №4 - Динамічне меню</p>
+    </footer>
+    
+    <script src="menu-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
